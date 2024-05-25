@@ -5,6 +5,7 @@ Text Color (Dark Gray): #2b2b2b;
 Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
+/*  
  :root{
   --bg-color:  #d1d1e8;
   --btn-link-active: #00675b;
@@ -133,17 +134,19 @@ button:hover, button:focus,
  
   section, .grid__item{
     padding: 20px;
-  }
+  } */
+
+  
   /* fallback for grid-start */
-.grid__item {
+/* .grid__item {
     display: inline-block;
     width: 33%;
-   }
+   } */
   
    /* fallback for grid-end */
   
    /* grid support */
-   @supports (display: grid) {
+   /* @supports (display: grid) {
   .projects-list {
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
@@ -155,9 +158,12 @@ button:hover, button:focus,
     width: auto;
     min-height: 250px;
     margin: 0;
-    transition: transform 0.2s ease-in-out;
-  }
-  .grid__item:hover{
+   transition: transform 0.2s ease-in-out; 
+    
+
+  } */
+
+  /* .grid__item:hover{
     transform: scale(1.05);
     cursor: pointer;
   }
@@ -225,6 +231,313 @@ button:hover, button:focus,
     transform: translate(100px, 48px);
   }
 }
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+} */
+
+:root {
+  --bg-color: #f6e4e4;
+  --btn-link-active: #E4C2C1;
+  --link-visited: #B6666F;
+  --btn-font-color: white;
+  --btn-secondary: #F53163;
+  --btn-secondary-bg: #D1A080;
+  --grid-bg-color: #E4C2C1;
+  --header-border-bottom: #E4C2C1;
+  --btn-border-bottom: rgba(0, 0, 0, 0.3);
+  --nav-list-color: black;
+  --back-to-top-color: black;
+  --link-color: #B6666F;
+  --link-hover-color: #F53163;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1 .hello-world {
+  font-size: 40px;
+  text-align: left;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: var(--link-hover-color);
+}
+
+a:active {
+  color: var(--link-hover-color);
+}
+
+a .button{
+  margin-top: 30px;
+}
+
+.about-me-content {
+  width: 700px;
+  justify-content: center;
+  padding: 24px;
+  margin: auto;
+}
+
+.about-me, .experience, .illustration {
+  text-align: center;
+}
+
+button, .button {
+  border: none;
+  font-family: inherit;
+  background-color: var(--btn-link-active);
+  color: var(--btn-font-color) !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  border-bottom: 2px solid var(--btn-border-bottom);
+  transition: opacity 0.2s;
+}
+
+button, .button, .go-to-projects {
+  background-color:var(--link-color) ;
+}
+
+.about-exp{
+  background-color:var(--link-color) ;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary);
+}
+
+.navigation-list {
+  list-style-type: none;
+  color: var(--nav-list-color);
+  font-size: large;
+  font-weight: bold;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+  color: var(--nav-list-color);
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item {
+  color: var(--nav-list-color);
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 25%;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.page-footer-contact {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  margin-top: 280px;
+  text-align: center;
+}
+
+a.to-top-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--back-to-top-color);
+}
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid var(--header-border-bottom);
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.contact-me {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.my-contact {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 25px;
+  text-align: center;
+  
+}
+
+section img{
+  border-radius: 5px;
+}
+section, .grid__item {
+  padding: 20px;
+}
+
+ .grid__item {
+  background-color: var(--grid-bg-color);
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+ .grid__item, .button{
+  margin-top: 80px;
+ }
+
+/* fallback for grid-start */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* fallback for grid-end */
+
+/* grid support */
+@supports (display: grid) {
+  .projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  .grid__item {
+    width: auto;
+    min-height: 250px;
+    margin: 0;
+    transition: 1.5s;
+  }
+
+  .grid__item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .projects-list {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
