@@ -170,6 +170,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: center;
 }
 
+.impressum{
+  font-size: 16px;
+  font-weight: bold;
+  color: #B6666F;
+}
+
 a.to-top-btn {
   display: -webkit-box;
   display: -ms-flexbox;

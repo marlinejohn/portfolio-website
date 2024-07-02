@@ -138,6 +138,12 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: center;
 }
 
+.impressum{
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--link-color);
+}
+
 a.to-top-btn {
   display: flex;
   flex-direction: column;
